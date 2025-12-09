@@ -1,0 +1,71 @@
+================================================================================
+AR COMPUTER VISION PROJECT - SETUP INSTRUCTIONS
+================================================================================
+
+1. PREREQUISITES
+--------------------------------------------------------------------------------
+- Python 3.8 or higher installed on your system.
+- A working webcam.
+- An internet connection (for the first run only) to download the YOLOv8 AI model.
+
+2. INSTALLATION
+--------------------------------------------------------------------------------
+It is recommended to run this project in a virtual environment to avoid conflicts.
+
+Step A: Create a Virtual Environment (Optional but Recommended)
+   - Windows:
+     python -m venv venv
+     venv\Scripts\activate
+
+   - Mac/Linux:
+     python3 -m venv venv
+     source venv/bin/activate
+
+Step B: Install Dependencies
+   Ensure your 'requirements.txt' contains the following libraries:
+     - opencv-python
+     - numpy
+     - ultralytics
+     - mediapipe
+
+   Run the installation command:
+     pip install -r requirements.txt
+
+3. HOW TO RUN
+--------------------------------------------------------------------------------
+1. Open your terminal or command prompt.
+2. Navigate to the project folder.
+3. Run the Python script:
+     python ar_project.py
+
+   (Note: On the first run, the system will automatically download the
+    'yolov8n.pt' model file. This may take a few moments.)
+
+4. USER GUIDE & CONTROLS
+--------------------------------------------------------------------------------
+The application detects 5 objects: Person, Cup, Laptop, Cell Phone, Bottle, Chair.
+
+[ Interaction Features ]
+- PRIVACY MODE:
+  When a person is detected, a green "PRIVACY: OFF" button appears next to them.
+  Click this button to toggle Privacy Mode ON.
+  -> ON: The face is blurred, and "PROTECTED" text appears.
+  -> OFF: The face is visible, and Real-Time Mood Detection is active.
+
+- MOOD DETECTION:
+  The system analyzes facial geometry (mouth curve + eyebrows) to detect:
+  Happy, Sad, Angry, Surprised, Fear, or Neutral.
+  (Privacy Mode must be OFF to see mood).
+
+[ Controls ]
+- Press 'q' on your keyboard at any time to close the application.
+
+5. TROUBLESHOOTING
+--------------------------------------------------------------------------------
+- Issue: "Camera not found" or black screen.
+  Fix: Open the code ('ar_project.py') and change line:
+  cap = cv2.VideoCapture(0)  ->  cap = cv2.VideoCapture(1)
+
+- Issue: The application is lagging.
+  Fix: Ensure your laptop is plugged into power (AI runs slower on battery).
+  The application is optimized for M1/M2 Macs and standard CPUs using MediaPipe.

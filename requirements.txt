@@ -1,0 +1,8 @@
+opencv-python
+ultralytics
+deepface
+tf-keras
+mediapipe
+numpy
+hsemotion
+timm==0.9.2
