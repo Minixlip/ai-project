@@ -6,3 +6,6 @@ mediapipe
 numpy
 hsemotion
 timm==0.9.2
+pygame 
+PyOpenGL 
+PyOpenGL_accelerate 
