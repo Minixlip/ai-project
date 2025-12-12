@@ -69,3 +69,32 @@ The application detects 5 objects: Person, Cup, Laptop, Cell Phone, Bottle, Chai
 - Issue: The application is lagging.
   Fix: Ensure your laptop is plugged into power (AI runs slower on battery).
   The application is optimized for M1/M2 Macs and standard CPUs using MediaPipe.
+
+Fluid Cube Controller - Setup Instructions
+==========================================
+
+1. Prerequisites
+----------------
+Ensure you have Python installed (version 3.7 or higher recommended).
+
+2. Installation
+---------------
+Open your terminal or command prompt in this folder and run the following command to install the required libraries:
+
+    pip install -r requirements.txt
+
+If you do not have the requirements.txt file, you can install the libraries manually using:
+
+    pip install opencv-python mediapipe pygame PyOpenGL PyOpenGL_accelerate numpy
+
+3. Running the Application
+--------------------------
+To start the gesture-controlled fluid simulation, run:
+
+    python fluid_cube.py
+
+4. Troubleshooting
+------------------
+- If the window closes immediately, check the terminal for error messages.
+- If the simulation is slow, ensure your laptop is plugged in (for better performance).
+- If the camera doesn't open, make sure no other app (like Zoom/Discord) is using it.
